@@ -9,9 +9,10 @@ All models were written in `PyTorch`.
 ### Datasets
 Please download the pre-processed `NYUv2` dataset [here](https://www.dropbox.com/scl/fo/p7n54hqfpfyc6fe6n62qk/AKVb28ZmgDiGdRMNkX5WJvo?rlkey=hcf31bdrezqjih36oi8usjait&e=1&dl=0) which is evaluated in the papers. Moreover, if you are interested, the raw 13-class NYUv2 dataset can be downloaded [here](https://github.com/ankurhanda/nyuv2-meta-data) with segmentation labels defined [here](https://github.com/ankurhanda/SceneNetv1.0/). 
 ### Weight Pruning for Model Compression
-The folder `prune_apgda` provides the code of our proposed network using weight pruning strategy to compress the model in 40x and 60x along with all the baselines on `NYUv2` dataset presented in the paper 1. 
+The folder `prune_apgda` provides the code of our proposed network using weight pruning strategy to compress the model in 40x and 60x along with all the baselines on `NYUv2` dataset presented in paper 1. 
 
 ### Dynamic Sparse Training and more comparable baselines
+The root folder provides the code of our proposed network using dynamic sparse training together with weight pruning for comparison in 60x and 100x along with all the baselines on `NYUv2` and `CIFAR100` datasets presented in paper 2.
 
 **To be further contributed...**
 
