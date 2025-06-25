@@ -1,4 +1,4 @@
-# MTL-Minmax
+# A Min-max Optimization Framework for Sparse Multi-task Deep Neural Networks
 This repository contains the source code of Multi-Task Learning with Min-max Optimization and baselines from the following papers:
 1) [A Min-max Optimization Framework for Multi-task Deep Neural Network Compression](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10557958) (In proceedings of ISCAS 2024);
 2) A Min-max Optimization Framework for Sparse Multi-task Deep Neural Networks. (Neurocomputing accepted)
