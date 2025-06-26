@@ -5,14 +5,16 @@ This repository contains the source code of Multi-Task Learning with Min-max Opt
 
 All models were written in `PyTorch`. 
 
-## Experiments
-### Datasets
+## Datasets
 We implemented all weighting baselines presented in the paper for computer vision tasks: Dense Prediction Tasks (for NYUv2) and Multi-domain Classification Tasks (for CIFAR-100).
 
 - NYUv2 [3 Tasks]: 13 Class Segmentation + Depth Estimation + Surface Normal Prediction. [288 x 384] Resolution.
 - CIFAR-100 [20 Tasks]: 20 Class Object Classification.
 
 Please download the pre-processed `NYUv2` dataset [here](https://www.dropbox.com/scl/fo/p7n54hqfpfyc6fe6n62qk/AKVb28ZmgDiGdRMNkX5WJvo?rlkey=hcf31bdrezqjih36oi8usjait&e=1&dl=0) which is evaluated in the papers. (Moreover, if you are more interested, the raw 13-class NYUv2 dataset can be downloaded [here](https://github.com/ankurhanda/nyuv2-meta-data) with segmentation labels defined [here](https://github.com/ankurhanda/SceneNetv1.0/). )
+
+## Experiments
+
 ### Weight Pruning for Model Compression
 The folder `prune_apgda` provides the code of our proposed network using weight pruning strategy to compress the model in 40x and 60x along with all the baselines on `NYUv2` dataset presented in paper 1. The basic network structure is established based on [MTAN](https://github.com/lorenmt/mtan). 
 We propose a novel weight pruning method to compress the model, and a Min-Max optimization method including APGDA algorithm to further inprove the model performance.
@@ -28,7 +30,7 @@ The root folder provides the code of our proposed network using dynamic sparse t
   
 - For DiSparse and AdapMTL methods, please refer to [this link](https://github.com/MitchellX/AdapMTL). You may also use the `environment.yml` document to setup the environment directly.
 
-## Parameter Settings
+### Parameter Settings
 
 - The model compression project is located in `prune_apgda` folder. Please use `python trainer_apgda.py` to run the project.
 
