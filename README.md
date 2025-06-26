@@ -33,14 +33,21 @@ The root folder provides the code of our proposed network using dynamic sparse t
 - The model compression project is located in `prune_apgda` folder. Please use `python trainer_apgda.py` to run the project.
 
   Please first use `--stage pretrain` to save the dense model. After using `--stage rew` to implement reweighting, finally use `--stage retrain` to retrain the compressed model.
+  
   The pruning rate 40x is equivalent to `--prune-ratios 0.975`. The pruning rate 60x is equivalent to `--prune-ratios 0.983`.
+  
   Min-max hyperparameter settings: beta = 50, gamma = 5 (pre-settled).
 
 - The dynamic sparse training project is located in the root folder. Please use `python trainer_nyuv2.py` or `python trainer_cifar.py` to run the corresponding project.
+  
   Please first use `--stage pretrain` to save the dense model. After using `--stage rew` to implement reweighting, finally use `--stage retrain` to retrain the compressed model.
+  
   Directly use `--stage retrain` to implement Dynamic Sparse Training (without loading pretrained model).
+  
   The pruning rate 60x is equivalent to `--prune-ratios 0.983`. In this case, the `layer_prune_ratios` and `layer_grow_ratios` should be set to 0.0051.
+  
   The pruning rate 100x is equivalent to `--prune-ratios 0.99`. In this case, the `layer_prune_ratios` and `layer_grow_ratios` should be set to 0.003.
+  
   Min-max hyperparameter settings: beta = 10, gamma = 5 (pre-settled).
 
 ## Acknowledgements
