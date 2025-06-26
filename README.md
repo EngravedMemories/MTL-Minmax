@@ -51,10 +51,10 @@ The root folder provides the code of our proposed network using dynamic sparse t
   Min-max hyperparameter settings: beta = 10, gamma = 5 (pre-settled).
 
 ## Acknowledgements
-We would sincerely thank Shikun Liu and his group for the Multi-task Attention Network (MTAN) design. The following links show their [MTAN Project Page](https://github.com/lorenmt/mtan) and [Auto-lambda Project Page](https://github.com/lorenmt/auto-lambda).
+We would sincerely thank Dr. Shikun Liu and his group for the Multi-task Attention Network (MTAN) design. The following links show their [MTAN Project Page](https://github.com/lorenmt/mtan) and [Auto-lambda Project Page](https://github.com/lorenmt/auto-lambda).
 
 ## Citations
-If you find this code/work to be useful in your own research, please considering citing the following.
+If you find this code/work to be useful in your own research, please consider citing the following.
 - Conference version:
 ```bash
 @inproceedings{guo2024min,
@@ -66,7 +66,7 @@ If you find this code/work to be useful in your own research, please considering
   organization={IEEE}
 }
 ```
-- Journal version: To be expected!
+- Journal version: To be published!
 
 ## Contact
 If you have any questions, please contact Jiacheng Guo at `j.guo58@vikes.csuohio.edu`.
