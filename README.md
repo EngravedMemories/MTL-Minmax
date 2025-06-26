@@ -10,14 +10,14 @@ All models were written in `PyTorch`.
 We implemented all weighting baselines presented in the paper for computer vision tasks: Dense Prediction Tasks (for NYUv2) and Multi-domain Classification Tasks (for CIFAR-100).
 
 - NYUv2 [3 Tasks]: 13 Class Segmentation + Depth Estimation + Surface Normal Prediction. [288 x 384] Resolution.
-- CIFAR-100 [20 tasks]: 20 Classes Object Classification.
+- CIFAR-100 [20 Tasks]: 20 Class Object Classification.
 
 Please download the pre-processed `NYUv2` dataset [here](https://www.dropbox.com/scl/fo/p7n54hqfpfyc6fe6n62qk/AKVb28ZmgDiGdRMNkX5WJvo?rlkey=hcf31bdrezqjih36oi8usjait&e=1&dl=0) which is evaluated in the papers. Moreover, if you are interested, the raw 13-class NYUv2 dataset can be downloaded [here](https://github.com/ankurhanda/nyuv2-meta-data) with segmentation labels defined [here](https://github.com/ankurhanda/SceneNetv1.0/). 
 ### Weight Pruning for Model Compression
 The folder `prune_apgda` provides the code of our proposed network using weight pruning strategy to compress the model in 40x and 60x along with all the baselines on `NYUv2` dataset presented in paper 1. The basic network structure is established based on [MTAN](https://github.com/lorenmt/mtan). 
 We propose a novel weight pruning method to compress the model, and a Min-Max optimization method including APGDA algorithm to further inprove the model performance.
 
-### Dynamic Sparse Training and more comparable baselines
+### Dynamic Sparse Training and More Comparable Baselines
 The root folder provides the code of our proposed network using dynamic sparse training together with weight pruning for comparison in 60x and 100x along with all the baselines on `NYUv2` and `CIFAR100` datasets presented in paper 2. The basic network structure is established based on [Auto-lambda](https://github.com/lorenmt/auto-lambda).
 
 **Weighting-based settings:**
@@ -30,7 +30,11 @@ The root folder provides the code of our proposed network using dynamic sparse t
 
 ## Parameter Settings
 
+- The model compression project is located in `prune_apgda` folder. Please use `python trainer_apgda.py` to run the project.
 
+  Please first use `--stage pretrain` to save the dense model. After using `--stage rew` to implement reweighting, finally use `--stage retrain` to retrain the compressed model.
+  The pruning rate 40x is equivalent to `--prune-ratios 0.975`. The pruning rate 60x is equivalent to `--prune-ratios 0.983`.
+  Min-max hyperparameter settings: beta = 50, gamma = 5 (pre-settled).
 
 ## Acknowledgements
 We would sincerely thank Shikun Liu and his group for the Multi-task Attention Network (MTAN) design. The following links show their [MTAN Project Page](https://github.com/lorenmt/mtan) and [Auto-lambda Project Page](https://github.com/lorenmt/auto-lambda).
