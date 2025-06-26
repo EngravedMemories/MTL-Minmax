@@ -36,11 +36,19 @@ The root folder provides the code of our proposed network using dynamic sparse t
   The pruning rate 40x is equivalent to `--prune-ratios 0.975`. The pruning rate 60x is equivalent to `--prune-ratios 0.983`.
   Min-max hyperparameter settings: beta = 50, gamma = 5 (pre-settled).
 
+- The dynamic sparse training project is located in the root folder. Please use `python trainer_nyuv2.py` or `python trainer_cifar.py` to run the corresponding project.
+  Please first use `--stage pretrain` to save the dense model. After using `--stage rew` to implement reweighting, finally use `--stage retrain` to retrain the compressed model.
+  Directly use `--stage retrain` to implement Dynamic Sparse Training (without loading pretrained model).
+  The pruning rate 60x is equivalent to `--prune-ratios 0.983`. In this case, the `layer_prune_ratios` and `layer_grow_ratios` should be set to 0.0051.
+  The pruning rate 100x is equivalent to `--prune-ratios 0.99`. In this case, the `layer_prune_ratios` and `layer_grow_ratios` should be set to 0.003.
+  Min-max hyperparameter settings: beta = 10, gamma = 5 (pre-settled).
+
 ## Acknowledgements
 We would sincerely thank Shikun Liu and his group for the Multi-task Attention Network (MTAN) design. The following links show their [MTAN Project Page](https://github.com/lorenmt/mtan) and [Auto-lambda Project Page](https://github.com/lorenmt/auto-lambda).
 
 ## Citations
-If you find this code/work to be useful in your own research, please considering citing the following (Conference version):
+If you find this code/work to be useful in your own research, please considering citing the following.
+- Conference version:
 ```bash
 @inproceedings{guo2024min,
   title={A Min-Max Optimization Framework for Multi-task Deep Neural Network Compression},
@@ -51,6 +59,7 @@ If you find this code/work to be useful in your own research, please considering
   organization={IEEE}
 }
 ```
+- Journal version: To be expected!
 
 ## Contact
 If you have any questions, please contact Jiacheng Guo at `j.guo58@vikes.csuohio.edu`.
