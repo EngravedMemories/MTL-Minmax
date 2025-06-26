@@ -86,8 +86,8 @@ def multi_task_trainer(train_loader, test_loader, multi_task_model, device, opti
     penalty2 = 1.5
     penalty3 = 3
     K = 3
-    beta = 30
-    gamma = 3
+    beta = 50
+    gamma = 5
     rew_penalty = 1e-7
 
     task_W = torch.ones(K) / K
