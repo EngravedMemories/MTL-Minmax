@@ -28,6 +28,10 @@ The root folder provides the code of our proposed network using dynamic sparse t
   
 - For DiSparse and AdapMTL methods, please refer to [this link](https://github.com/MitchellX/AdapMTL). You may also use the `environment.yml` document to setup the environment directly.
 
+## Parameter Settings
+
+
+
 ## Acknowledgements
 We would sincerely thank Shikun Liu and his group for the Multi-task Attention Network (MTAN) design. The following links show their [MTAN Project Page](https://github.com/lorenmt/mtan) and [Auto-lambda Project Page](https://github.com/lorenmt/auto-lambda).
 
