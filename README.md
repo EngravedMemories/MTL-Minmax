@@ -57,7 +57,7 @@ We would sincerely thank Dr. Shikun Liu and his group for the Multi-task Attenti
 
 ## Citations
 If you find this code/work to be useful in your own research, please consider citing the following.
-- Conference version:
+- Conference paper:
 ```bash
 @inproceedings{guo2024min,
   title={A Min-Max Optimization Framework for Multi-task Deep Neural Network Compression},
@@ -68,7 +68,16 @@ If you find this code/work to be useful in your own research, please consider ci
   organization={IEEE}
 }
 ```
-- Journal version: To be published!
+- Journal article: 
+```bash
+@article{guo2025min,
+  title = {A Min–max Optimization Framework for Sparse Multi-task Deep Neural Network},
+  author = {Guo, Jiacheng and Li, Lei and Sun, Huiming and Qin, Minghai and Yu, Hongkai and Zhang, Tianyun},
+  journal = {Neurocomputing},
+  volume = {650},
+  pages = {130865},
+  year = {2025},
+}
 
 ## Contact
 If you have any questions, please contact Jiacheng Guo at `j.guo58@vikes.csuohio.edu`.
